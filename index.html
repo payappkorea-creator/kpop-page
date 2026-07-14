@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title class="lang-ko">K-POP: 글로벌 음악 트렌드를 이끄는 K-팝 소개</title>
+  <title class="lang-en">K-POP: Introducing K-POP, Leading Global Music Trends</title>
+  <meta name="description" content="전 세계를 사로잡은 대한민국의 대중음악, K-팝(K-POP)의 독창적인 매력과 역사, 글로벌 트렌드를 소개합니다.">
+  
+  <!-- Outfit Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgDark: '#060814',
+            accentPink: '#ff2e93',
+            accentPurple: '#9200ff',
+            accentCyan: '#00f0ff',
+            accentBlue: '#0055ff',
+            cardBg: 'rgba(255, 255, 255, 0.04)',
+            cardBorder: 'rgba(255, 255, 255, 0.1)',
+            textSecondary: '#9aa0c0',
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .card-animate {
+      opacity: 0;
+      animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    
+    .card-delay-1 { animation-delay: 150ms; }
+    .card-delay-2 { animation-delay: 350ms; }
+    .card-delay-3 { animation-delay: 550ms; }
+    
+    /* Enhanced Glassmorphism styling with internal light edge and stronger blur */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 
+        0 15px 35px 0 rgba(0, 0, 0, 0.3), 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+    }
+
+    /* Language switching styles */
+    html[lang="ko"] .lang-en { display: none !important; }
+    html[lang="en"] .lang-ko { display: none !important; }
+  </style>
+</head>
+<body class="bg-bgDark text-white font-sans min-h-screen relative overflow-x-hidden" style="background-image: radial-gradient(circle at 50% 0%, #0d153a 0%, #060814 70%);">
+
+  <!-- Glowing aura background blobs -->
+  <div class="absolute top-[-100px] right-[-50px] w-[600px] h-[600px] rounded-full bg-accentBlue filter blur-[140px] z-[-1] opacity-45 pointer-events-none"></div>
+  <div class="absolute bottom-[20%] left-[-150px] w-[500px] h-[500px] rounded-full bg-accentPurple filter blur-[140px] z-[-1] opacity-45 pointer-events-none"></div>
+  <div class="absolute top-[40%] right-[-100px] w-[500px] h-[500px] rounded-full bg-accentCyan filter blur-[140px] z-[-1] opacity-45 pointer-events-none"></div>
+
+  <!-- Language Toggle Button -->
+  <div class="absolute top-6 right-6 z-50">
+    <button onclick="toggleLang()" class="glass-card px-5 py-2.5 rounded-full font-extrabold text-xs tracking-wider uppercase border border-white/10 hover:border-accentCyan/50 hover:text-accentCyan transition-all duration-300 shadow-lg cursor-pointer flex items-center gap-2">
+      <span>🌐</span>
+      <span class="lang-ko">English</span>
+      <span class="lang-en">한국어</span>
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="py-16 px-8 text-center max-w-[800px] mx-auto">
+    <div class="inline-block px-6 py-2 rounded-full bg-cardBg border border-cardBorder font-semibold text-sm tracking-widest uppercase text-accentCyan mb-6 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-md">
+      <span class="lang-ko">글로벌 신드롬</span>
+      <span class="lang-en">Global Phenomenon</span>
+    </div>
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 bg-gradient-to-r from-white via-pink-300 to-accentPink bg-clip-text text-transparent">
+      The Power of <span class="bg-gradient-to-r from-accentCyan to-accentPink bg-clip-text text-transparent">K-POP</span>
+    </h1>
+    <p class="text-lg md:text-xl text-textSecondary max-w-[600px] mx-auto">
+      <span class="lang-ko">중독성 강한 멜로디, 한 치의 오차도 없는 퍼포먼스, 그리고 세련된 비주얼 콘셉트까지. 한국을 넘어 글로벌 트렌드를 선도하는 K-팝의 세계를 소개합니다.</span>
+      <span class="lang-en">Catchy melodies, razor-sharp synchronized choreography, and striking visual concepts. Welcome to the world of K-pop, leading global music trends beyond borders.</span>
+    </p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-[1200px] mx-auto px-8">
+    
+    <!-- Intro Section -->
+    <section class="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 md:gap-14 items-center mb-24">
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[-6px] after:w-[60px] after:h-[4px] after:bg-gradient-to-r after:from-accentPink after:to-accentPurple after:rounded-full">
+          <span class="lang-ko">K-팝이란 무엇인가요?</span>
+          <span class="lang-en">What is K-POP?</span>
+        </h2>
+        <div class="text-textSecondary text-lg leading-relaxed pt-2 space-y-4">
+          <p class="lang-ko">K-팝(Korean Popular Music)은 대한민국의 대중음악을 일컫는 말로, 오늘날에는 단순한 음악 장르를 넘어 댄스, 패션, 글로벌 팬덤 문화가 융합된 종합적인 문화 콘텐츠로 자리잡았습니다.</p>
+          <p class="lang-en">K-pop (Korean Popular Music) refers to popular music originating from South Korea. Today, it has evolved beyond a mere musical genre into a comprehensive cultural package integrating dance, fashion, and global fandom culture.</p>
+          
+          <p class="lang-ko">힙합, R&B, 일렉트로닉 댄스 등 전 세계의 다양한 장르를 독창적인 한국식 감성으로 재해석하여 누구나 쉽게 즐길 수 있는 글로벌 메인스트림 음악이 되었습니다.</p>
+          <p class="lang-en">By reimagining diverse global genres such as hip-hop, R&B, and electronic dance music with unique Korean sensibilities, it has established itself as mainstream music enjoyed worldwide.</p>
+        </div>
+      </div>
+      <div class="relative rounded-[24px] overflow-hidden border border-cardBorder shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] aspect-[4/3] group hover:border-accentPink/30 hover:shadow-[0_25px_50px_rgba(255,46,147,0.15)] hover:-translate-y-1">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-bgDark/40 z-10 pointer-events-none"></div>
+        <img src="kpop_stage.png" alt="K-POP Stage Concert" class="w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105">
+      </div>
+    </section>
+
+    <!-- 3 Key Elements Section -->
+    <section class="mb-24">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-3">
+          <span class="lang-ko">K-팝을 구성하는 3대 요소</span>
+          <span class="lang-en">3 Key Elements of K-POP</span>
+        </h2>
+        <p class="text-textSecondary">
+          <span class="lang-ko">전 세계 팬들이 K-팝에 열광할 수밖에 없는 특별한 이유</span>
+          <span class="lang-en">Special reasons why global fans fall in love with K-pop</span>
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="relative glass-card rounded-[24px] p-10 card-animate card-delay-1 overflow-hidden group hover:-translate-y-2 hover:border-accentPink/30 hover:shadow-[0_20px_40px_rgba(255,46,147,0.15)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <div class="absolute inset-0 bg-gradient-to-br from-accentBlue/10 to-accentCyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-[-1]"></div>
+          <span class="text-4xl mb-6 inline-block">⚡</span>
+          <h3 class="text-xl font-bold mb-4">
+            <span class="lang-ko">독보적인 퍼포먼스</span>
+            <span class="lang-en">Unrivaled Performance</span>
+          </h3>
+          <p class="text-textSecondary text-sm leading-relaxed">
+            <span class="lang-ko">수개월간의 연습으로 다져진 자로 잰 듯한 칼군무와 파워풀한 퍼포먼스는 K-팝 무대의 상징입니다. 시각적인 즐거움과 짜릿한 카타르시스를 선사합니다.</span>
+            <span class="lang-en">Razor-sharp synchronized choreography and powerful stage presence, perfected through rigorous training, are hallmarks of K-pop, delivering visual thrill and catharsis.</span>
+          </p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="relative glass-card rounded-[24px] p-10 card-animate card-delay-2 overflow-hidden group hover:-translate-y-2 hover:border-accentPink/30 hover:shadow-[0_20px_40px_rgba(255,46,147,0.15)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <div class="absolute inset-0 bg-gradient-to-br from-accentBlue/10 to-accentCyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-[-1]"></div>
+          <span class="text-4xl mb-6 inline-block">✨</span>
+          <h3 class="text-xl font-bold mb-4">
+            <span class="lang-ko">감각적인 비주얼 & 콘셉트</span>
+            <span class="lang-en">Striking Visuals & Concept</span>
+          </h3>
+          <p class="text-textSecondary text-sm leading-relaxed">
+            <span class="lang-ko">앨범마다 새롭게 정의되는 스토리텔링과 세계관, 그리고 세련된 패션과 화려한 뮤직비디오는 음악을 넘어 시각적 예술을 완성합니다.</span>
+            <span class="lang-en">Creative universe, storytelling defined in every album, trendy fashion, and cinematic music videos complete a visual art form that goes beyond music.</span>
+          </p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="relative glass-card rounded-[24px] p-10 card-animate card-delay-3 overflow-hidden group hover:-translate-y-2 hover:border-accentPink/30 hover:shadow-[0_20px_40px_rgba(255,46,147,0.15)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <div class="absolute inset-0 bg-gradient-to-br from-accentBlue/10 to-accentCyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-[-1]"></div>
+          <span class="text-4xl mb-6 inline-block">🤝</span>
+          <h3 class="text-xl font-bold mb-4">
+            <span class="lang-ko">글로벌 팬덤 문화</span>
+            <span class="lang-en">Global Fandom Culture</span>
+          </h3>
+          <p class="text-textSecondary text-sm leading-relaxed">
+            <span class="lang-ko">소셜 미디어와 글로벌 플랫폼을 통해 아티스트와 전 세계 팬들이 실시간으로 교감하며, 단순한 소비를 넘어 하나의 거대한 유대 관계를 형성합니다.</span>
+            <span class="lang-en">Artists and international fans communicate in real-time via social media and global platforms, forming a tight-knit community that transcends mere commercial consumption.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Merchandise Gallery Section -->
+    <section class="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-10 md:gap-14 items-center mb-24">
+      <div class="relative rounded-[24px] overflow-hidden border border-cardBorder shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] aspect-[4/3] group hover:border-accentCyan/30 hover:shadow-[0_25px_50px_rgba(0,240,255,0.15)] hover:-translate-y-1">
+        <img src="kpop_merch.png" alt="K-POP Album and Goods Merchandise" class="w-full h-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105">
+      </div>
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-[-6px] after:w-[60px] after:h-[4px] after:bg-gradient-to-r after:from-accentCyan after:to-accentPurple after:rounded-full">
+          <span class="lang-ko">피지컬 앨범과 팬덤 굿즈</span>
+          <span class="lang-en">Physical Albums & Fandom Merch</span>
+        </h2>
+        <p class="text-textSecondary text-lg leading-relaxed pt-2">
+          <span class="lang-ko">K-팝은 단순히 음악을 듣는 즐거움을 넘어 소유의 가치를 선사합니다. 아티스트의 콘셉트 세계관을 고스란히 담아낸 독창적인 앨범 디자인, 희소가치가 높은 랜덤 포토카드, 그리고 공연장을 빛내는 응원봉(Lightstick)은 팬덤 문화를 하나로 이어줍니다.</span>
+          <span class="lang-en">K-pop offers the value of ownership beyond the simple joy of listening. Creative album packaging containing the artist's concept universe, rare random photo cards, and glowing custom lightsticks that light up concert halls unite the fandom culture.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Generations Section -->
+    <section class="text-center mb-24">
+      <h2 class="text-4xl font-bold mb-3">
+        <span class="lang-ko">K-팝의 발전 흐름</span>
+        <span class="lang-en">The Evolution of K-POP</span>
+      </h2>
+      <p class="text-textSecondary text-lg mb-12">
+        <span class="lang-ko">세대를 거듭하며 진화하는 아티스트와 음악적 스펙트럼</span>
+        <span class="lang-en">Artists and musical spectrum evolving through generations</span>
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Gen 1 -->
+        <div class="relative rounded-[20px] overflow-hidden h-[350px] flex flex-col justify-end p-8 border border-cardBorder shadow-[0_4px_30px_rgba(0,0,0,0.2)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] hover:border-accentCyan/40"
+             style="background: linear-gradient(to top, rgba(6, 8, 20, 0.95), rgba(6, 8, 20, 0.3)), linear-gradient(135deg, #3f2b96, #a8c0ff);">
+          <h4 class="text-xl font-bold text-left mb-2">
+            <span class="lang-ko">2세대 & 3세대</span>
+            <span class="lang-en">2nd & 3rd Generation</span>
+          </h4>
+          <p class="text-textSecondary text-sm text-left">
+            <span class="lang-ko">동방신기, 빅뱅, 소녀시대부터 방탄소년단(BTS), 블랙핑크에 이르기까지 글로벌 시장의 문을 열고 정상에 선 황금기.</span>
+            <span class="lang-en">The golden age that opened the global market and reached the top, from TVXQ, BIGBANG, and Girls' Generation to BTS and BLACKPINK.</span>
+          </p>
+        </div>
+        <!-- Gen 2 -->
+        <div class="relative rounded-[20px] overflow-hidden h-[350px] flex flex-col justify-end p-8 border border-cardBorder shadow-[0_4px_30px_rgba(0,0,0,0.2)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] hover:border-accentCyan/40"
+             style="background: linear-gradient(to top, rgba(6, 8, 20, 0.95), rgba(6, 8, 20, 0.3)), linear-gradient(135deg, #11998e, #38ef7d);">
+          <h4 class="text-xl font-bold text-left mb-2">
+            <span class="lang-ko">4세대</span>
+            <span class="lang-en">4th Generation</span>
+          </h4>
+          <p class="text-textSecondary text-sm text-left">
+            <span class="lang-ko">뉴진스, 아이브, 에스파, 스트레이 키즈 등 독창적인 콘셉트와 강력한 1020 팬덤을 기반으로 한 다채로운 음악 트렌드.</span>
+            <span class="lang-en">A colorful music trend powered by unique concepts and strong Gen Z fandoms, featuring groups like NewJeans, IVE, aespa, and Stray Kids.</span>
+          </p>
+        </div>
+        <!-- Gen 3 -->
+        <div class="relative rounded-[20px] overflow-hidden h-[350px] flex flex-col justify-end p-8 border border-cardBorder shadow-[0_4px_30px_rgba(0,0,0,0.2)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.03] hover:border-accentCyan/40"
+             style="background: linear-gradient(to top, rgba(6, 8, 20, 0.95), rgba(6, 8, 20, 0.3)), linear-gradient(135deg, #ee0979, #ff6a00);">
+          <h4 class="text-xl font-bold text-left mb-2">
+            <span class="lang-ko">5세대 & 그 이후</span>
+            <span class="lang-en">5th Gen & Beyond</span>
+          </h4>
+          <p class="text-textSecondary text-sm text-left">
+            <span class="lang-ko">가상 아티스트의 도약, 숏폼 맞춤형 직관적 음악과 이지 리스닝 트렌드 속에 다인원 그룹 idntt의 데뷔와 아이돌들의 자체 프로듀싱 비중 확대.</span>
+            <span class="lang-en">The rise of virtual artists, short-form-friendly hook songs, and the easy listening trend alongside the debut of multi-member group idntt and the expansion of self-producing idols.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent News & Trend 2026 Section -->
+    <section class="mb-24">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-3">
+          <span class="lang-ko">2026 K-POP 실시간 트렌드 & 뉴스</span>
+          <span class="lang-en">2026 K-POP Real-time Trends & News</span>
+        </h2>
+        <p class="text-textSecondary text-lg">
+          <span class="lang-ko">가장 뜨거운 최신 K-팝 소식과 업계 동향 (출처: 위키백과)</span>
+          <span class="lang-en">The hottest K-pop news and industry updates (Source: Wikipedia)</span>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- News 1 -->
+        <div class="glass-card rounded-[24px] p-8 flex flex-col justify-between border border-white/10 hover:border-accentCyan/30 transition-all duration-300">
+          <div>
+            <div class="text-accentCyan text-xs font-bold uppercase tracking-wider mb-2">HOT CHART</div>
+            <h3 class="text-lg font-bold mb-3 text-white">
+              <span class="lang-ko">에스파 'LEMONADE' & 아일릿 'It's Me' 차트 정상 격돌</span>
+              <span class="lang-en">aespa's 'LEMONADE' & ILLIT's 'It's Me' Battle for Charts</span>
+            </h3>
+            <p class="text-textSecondary text-sm leading-relaxed">
+              <span class="lang-ko">2026년 7월 컴백 대란 속에서 에스파(aespa)의 신곡 'LEMONADE'와 아일릿(ILLIT)의 'It's Me', 그리고 허츠투허츠(Hearts2Hearts)의 'Lemon Tang' 등이 음원 차트 최상위권에서 뜨겁게 경쟁하고 있습니다.</span>
+              <span class="lang-en">In the mid-July 2026 comeback rush, aespa's new single 'LEMONADE,' ILLIT's 'It's Me,' and Hearts2Hearts' 'Lemon Tang' are fiercely competing at the top of the music charts.</span>
+            </p>
+          </div>
+          <div class="text-gray-500 text-xs mt-6">July 2026 Update</div>
+        </div>
+
+        <!-- News 2 -->
+        <div class="glass-card rounded-[24px] p-8 flex flex-col justify-between border border-white/10 hover:border-accentPink/30 transition-all duration-300">
+          <div>
+            <div class="text-accentPink text-xs font-bold uppercase tracking-wider mb-2">SOLO & DEBUT</div>
+            <h3 class="text-lg font-bold mb-3 text-white">
+              <span class="lang-ko">TXT 연준 & 몬스타엑스 기현 솔로 활동 및 20인조 'idntt' 데뷔</span>
+              <span class="lang-en">TXT Yeonjun & MONSTA X Kihyun Solos & 'idntt' Debut</span>
+            </h3>
+            <p class="text-textSecondary text-sm leading-relaxed">
+              <span class="lang-ko">투모로우바이투게더(TXT) 연준의 솔로 프로젝트, 몬스타엑스 기현 및 틴탑 니엘의 솔로 컴백이 이어지는 한편, 20인조 초대형 신인 그룹 'idntt'가 가요계에 정식 출격했습니다.</span>
+              <span class="lang-en">While TXT Yeonjun's solo project, MONSTA X Kihyun's, and Teen Top Niel's solo comebacks are underway, the mega 20-member rookie group 'idntt' has officially debuted.</span>
+            </p>
+          </div>
+          <div class="text-gray-500 text-xs mt-6">July 2026 Update</div>
+        </div>
+
+        <!-- News 3 -->
+        <div class="glass-card rounded-[24px] p-8 flex flex-col justify-between border border-white/10 hover:border-accentPurple/30 transition-all duration-300">
+          <div>
+            <div class="text-accentPurple text-xs font-bold uppercase tracking-wider mb-2">INDUSTRY TREND</div>
+            <h3 class="text-lg font-bold mb-3 text-white">
+              <span class="lang-ko">직관적 숏폼 훅송의 강세 및 '셀프 프로듀싱'의 확대</span>
+              <span class="lang-en">Rise of Short-form Hooks & Self-Producing Idols</span>
+            </h3>
+            <p class="text-textSecondary text-sm leading-relaxed">
+              <span class="lang-ko">최근 K-팝 곡들은 숏폼 콘텐츠 전파 속도에 맞춰 인트로를 단축하고 곧바로 강력한 훅으로 들어가는 전개를 보이고 있으며, 직접 작사·작곡 및 안무 제작을 이끄는 젊은 아이돌들의 프로듀싱 역량이 더욱 조명받고 있습니다.</span>
+              <span class="lang-en">Recent K-pop tracks are shortening intros and jumping straight into powerful hooks for short-form virality, while the self-producing capabilities of young idols leading songwriting and choreography gain massive attention.</span>
+            </p>
+          </div>
+          <div class="text-gray-500 text-xs mt-6">July 2026 Update</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="text-center bg-gradient-to-br from-white/5 to-white/[0.02] border border-cardBorder rounded-[30px] py-16 px-8 mb-16 relative overflow-hidden backdrop-blur-md">
+      <h2 class="text-4xl font-bold mb-4">
+        <span class="lang-ko">더 넓은 K-팝의 세계로</span>
+        <span class="lang-en">Into the Wider World of K-POP</span>
+      </h2>
+      <p class="text-textSecondary text-lg mb-8 max-w-[600px] mx-auto">
+        <span class="lang-ko">지금 이 순간에도 전 세계의 리스너들을 흥분시키고 있는 K-팝 트랙을 찾아 감상해 보세요. 당신만의 최애(Bias)가 기다리고 있습니다.</span>
+        <span class="lang-en">Explore and listen to the K-pop tracks thrilling listeners worldwide right now. Your bias is waiting for you.</span>
+      </p>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-accentPink to-accentPurple text-white font-bold tracking-wider shadow-[0_8px_24px_rgba(255,46,147,0.35)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(255,46,147,0.5)] hover:brightness-110">
+        <span class="lang-ko">K-팝 트렌드 보러가기</span>
+        <span class="lang-en">Explore K-pop Trends</span>
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-12 px-8 border-t border-cardBorder text-gray-500 text-sm">
+    <p>&copy; 2026 K-POP Introduction Page. Designed with passion.</p>
+  </footer>
+
+  <!-- Language Switcher Logic -->
+  <script>
+    function toggleLang() {
+      const html = document.documentElement;
+      if (html.lang === 'ko') {
+        html.lang = 'en';
+        localStorage.setItem('kpop-lang', 'en');
+      } else {
+        html.lang = 'ko';
+        localStorage.setItem('kpop-lang', 'ko');
+      }
+    }
+    
+    // Apply saved language preference on load
+    const savedLang = localStorage.getItem('kpop-lang') || 'ko';
+    document.documentElement.lang = savedLang;
+  </script>
+
+</body>
+</html>
